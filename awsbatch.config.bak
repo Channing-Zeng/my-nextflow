@@ -1,0 +1,18 @@
+aws.region = 'eu-west-2'
+aws.client.storageEncryption = 'none'
+executor.name = 'awsbatch'
+executor.awscli = '/home/ec2-user/miniconda/bin/aws'
+
+process {
+//  queue = { task.attempt > 2 ? 'env-test-on_demand' : 'env_test_fargate-spot' }
+	queue = {'queue_test_mirco'}
+	memory = { task.attempt > 1 ? 7.GB : 0.875.GB }
+	cpus = { task.attempt > 1 ? 4 : 1 }
+}
+
+params {
+
+  transcriptome_file = 's3://zenofbucket/nf-testing/transcriptome.fa'
+  outdir = "s3://zenofbucket/nf-testing/results"
+
+}

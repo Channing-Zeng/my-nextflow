@@ -1,0 +1,189 @@
+Jan-14 17:10:40.150 [main] DEBUG nextflow.cli.Launcher - $> nextflow run test.nf --reads 's3://zenofbucket/nf-testing/*_{1,2}.fq' --outdir 's3://zenofbucket/nf-testing/results/' -profile cloud -w 's3://zenofbucket/
+nf-testing/work/' -process.queue queue_test_light
+Jan-14 17:10:40.455 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.10.0
+Jan-14 17:10:40.530 [main] INFO  nextflow.cli.CmdRun - Launching `test.nf` [scruffy_meitner] - revision: 6f246f3d6c
+Jan-14 17:10:40.578 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/ec2-user/nf-testing/my-nextflow/nextflow.config
+Jan-14 17:10:40.585 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/ec2-user/nf-testing/my-nextflow/nextflow.config
+Jan-14 17:10:40.710 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `cloud`
+Jan-14 17:10:43.126 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, cloud, cluster]
+Jan-14 17:10:43.236 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/ec2-user/.nextflow/plugins
+Jan-14 17:10:43.238 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[nf-amazon@1.3.1]
+Jan-14 17:10:43.278 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jan-14 17:10:43.279 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jan-14 17:10:43.284 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Jan-14 17:10:43.310 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jan-14 17:10:43.310 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-amazon version: 1.3.1
+Jan-14 17:10:43.339 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-amazon@1.3.1' resolved
+Jan-14 17:10:43.339 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-amazon@1.3.1'
+Jan-14 17:10:43.369 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-amazon@1.3.1
+Jan-14 17:10:43.445 [main] DEBUG nextflow.file.FileHelper - > Added 'S3FileSystemProvider' to list of installed providers [s3]
+Jan-14 17:10:43.608 [main] DEBUG nextflow.Session - Session uuid: 271dbc60-c033-41fa-849a-05f01cc0b183
+Jan-14 17:10:43.613 [main] DEBUG nextflow.Session - Run name: scruffy_meitner
+Jan-14 17:10:43.613 [main] DEBUG nextflow.Session - Executor pool size: 2
+Jan-14 17:10:43.644 [main] DEBUG nextflow.file.FileHelper - Creating a file system instance for provider: S3FileSystemProvider
+Jan-14 17:10:43.674 [main] DEBUG nextflow.Global - Using AWS credential defined in `default` section in file: /home/ec2-user/.aws/credentials
+Jan-14 17:10:43.677 [main] DEBUG nextflow.file.FileHelper - AWS S3 config details: {secret_key=l29t7C.., max_error_retry=5, access_key=AKIAY5..}
+Jan-14 17:10:44.830 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.10.0 build 5640
+  Created: 11-11-2021 18:27 UTC 
+  System: Linux 4.14.252-195.483.amzn2.x86_64
+  Runtime: Groovy 3.0.9 on OpenJDK 64-Bit Server VM 1.8.0_152-release-1056-b12
+  Encoding: UTF-8 (UTF-8)
+  Process: 26130@ip-172-31-24-232.eu-west-2.compute.internal [172.31.24.232]
+  CPUs: 1 - Mem: 982.5 MB (180.7 MB) - Swap: 0 (0)
+Jan-14 17:10:45.557 [main] DEBUG nextflow.file.FileHelper - Can't check if specified path is NFS (1): /zenofbucket/
+nf-testing/work
+
+Jan-14 17:10:45.557 [main] DEBUG nextflow.Session - Work-dir: s3://zenofbucket/
+nf-testing/work [null]
+Jan-14 17:10:45.919 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[AwsBatchExecutor]
+Jan-14 17:10:45.955 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jan-14 17:10:46.045 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 2; maxThreads: 1000
+Jan-14 17:10:46.219 [main] DEBUG nextflow.Session - Session start invoked
+Jan-14 17:10:46.741 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jan-14 17:10:46.858 [main] INFO  nextflow.script.BaseScript - 0
+Jan-14 17:10:46.947 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: awsbatch
+Jan-14 17:10:46.953 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'awsbatch'
+Jan-14 17:10:46.955 [main] DEBUG nextflow.executor.Executor - [warm up] executor > awsbatch
+Jan-14 17:10:46.993 [main] DEBUG nextflow.util.ThrottlingExecutor - Creating throttling executor with opts: nextflow.util.ThrottlingExecutor$Options(poolName:AWSBatch-executor, limiter:RateLimiter[stableRate=50.0qps], poolSize:5, maxPoolSize:5, queueSize:5000, maxRetries:10, keepAlive:1m, autoThrottle:true, errorBurstDelay:1s, rampUpInterval:100, rampUpFactor:1.2, rampUpMaxRate:1.7976931348623157E308, backOffFactor:2.0, backOffMinRate:0.0166666667, retryDelay:1s)
+Jan-14 17:10:47.010 [main] DEBUG nextflow.util.ThrottlingExecutor - Creating throttling executor with opts: nextflow.util.ThrottlingExecutor$Options(poolName:AWSBatch-reaper, limiter:RateLimiter[stableRate=50.0qps], poolSize:5, maxPoolSize:5, queueSize:5000, maxRetries:10, keepAlive:1m, autoThrottle:true, errorBurstDelay:1s, rampUpInterval:100, rampUpFactor:1.2, rampUpMaxRate:1.7976931348623157E308, backOffFactor:2.0, backOffMinRate:0.0166666667, retryDelay:1s)
+Jan-14 17:10:47.011 [main] DEBUG n.cloud.aws.batch.AwsBatchExecutor - Creating parallel monitor for executor 'awsbatch' > pollInterval=10s; dumpInterval=5m
+Jan-14 17:10:47.221 [main] INFO  n.cloud.aws.batch.AwsBatchExecutor - Uploading local `bin` scripts folder to s3://zenofbucket/
+nf-testing/work/tmp/45/7a16033d73a741cf000f5594a7e797/bin
+Jan-14 17:10:47.441 [main] DEBUG nextflow.Global - Using AWS credential defined in `default` section in file: /home/ec2-user/.aws/credentials
+Jan-14 17:10:47.566 [main] DEBUG n.cloud.aws.batch.AwsBatchExecutor - [AWS BATCH] Executor options=AwsOptions(cliPath:/home/ec2-user/miniconda/bin/aws, storageClass:null, storageEncryption:null, remoteBinDir:/zenofbucket/
+nf-testing/work/tmp/45/7a16033d73a741cf000f5594a7e797/bin, region:null, maxParallelTransfers:4, maxTransferAttempts:5, delayBetweenAttempts:10s, retryMode:standard, fetchInstanceType:false, jobRole:null, volumes:[], awsCli:/home/ec2-user/miniconda/bin/aws)
+Jan-14 17:10:47.611 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 2; maxThreads: 1000
+Jan-14 17:10:47.933 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: foo
+Jan-14 17:10:47.965 [main] DEBUG nextflow.Session - Ignite dataflow network (1)
+Jan-14 17:10:47.965 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > foo
+Jan-14 17:10:47.974 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Jan-14 17:10:47.975 [main] DEBUG nextflow.Session - Session await
+Jan-14 17:10:48.881 [AWSBatch-executor-1] DEBUG n.c.aws.batch.AwsBatchTaskHandler - [AWS BATCH] [AWS BATCH] Created job definition name=nf-channingzen-mamba1:2; container=channingzen/mamba1
+Jan-14 17:10:48.986 [AWSBatch-executor-1] DEBUG n.c.aws.batch.AwsBatchTaskHandler - [AWS BATCH] submitted > job=7577dfcb-04ea-4b08-9a61-316bd96517ee; work-dir=s3://zenofbucket/
+nf-testing/work/5c/0ea6df0abbeaf123f48d170fe5bcdb
+Jan-14 17:10:48.993 [AWSBatch-executor-1] INFO  nextflow.Session - [5c/0ea6df] Submitted process > foo
+Jan-14 17:13:27.217 [Task monitor] DEBUG n.c.aws.batch.AwsBatchTaskHandler - [AWS BATCH] Cannot read exitstatus for task: `foo` | /zenofbucket/
+nf-testing/work/5c/0ea6df0abbeaf123f48d170fe5bcdb/.exitcode
+Jan-14 17:13:27.461 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: foo; status: COMPLETED; exit: -; error: nextflow.exception.ProcessUnrecoverableException: Essential container in task exited; workDir: s3://zenofbucket/
+nf-testing/work/5c/0ea6df0abbeaf123f48d170fe5bcdb]
+Jan-14 17:13:27.498 [Task monitor] DEBUG nextflow.processor.TaskRun - Unable to dump output of process 'null' -- Cause: java.nio.file.NoSuchFileException: /tmp/temp-s3-817024308169264637/.command.out
+Jan-14 17:13:27.508 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'foo'
+
+Caused by:
+  Essential container in task exited
+
+Command executed:
+
+  whoami
+  ls -ld /tmp
+
+Command exit status:
+  -
+
+Command output:
+  (empty)
+
+Command error:
+  usage: 
+  Note: AWS CLI version 2, the latest major version of the AWS CLI, is now stable and recommended for general use. For more information, see the AWS CLI version 2 installation instructions at: https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html
+  usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
+  To see help text, you can run:
+    aws help
+    aws <command> help
+    aws <command> <subcommand> help
+  aws: error: the following arguments are required: paths
+  bash: line 3: nf-testing/work/5c/0ea6df0abbeaf123f48d170fe5bcdb/.command.run: No such file or directory
+  bash: line 2: nf-testing/work/5c/0ea6df0abbeaf123f48d170fe5bcdb/.command.log: No such file or directory
+
+Work dir:
+  s3://zenofbucket/
+nf-testing/work/5c/0ea6df0abbeaf123f48d170fe5bcdb
+
+Tip: you can try to figure out what's wrong by changing to the process work dir and showing the script file named `.command.sh`
+Jan-14 17:13:27.533 [main] DEBUG nextflow.Session - Session await > all process finished
+Jan-14 17:13:27.570 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Process `foo` failed
+Jan-14 17:13:27.622 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jan-14 17:13:27.649 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=330ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Jan-14 17:13:27.815 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Jan-14 17:13:27.815 [main] INFO  org.pf4j.AbstractPluginManager - Stop plugin 'nf-amazon@1.3.1'
+Jan-14 17:13:27.815 [main] DEBUG nextflow.plugin.BasePlugin - Plugin stopped nf-amazon
+Jan-14 17:13:27.846 [main] WARN  nextflow.util.HistoryFile - Can't read history file: .nextflow/history
+java.lang.IllegalArgumentException: Not a valid history entry: `nf-testing/work/' -process.queue queue_test_light`
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at nextflow.util.HistoryFile$Record.parse(HistoryFile.groovy:406)
+	at nextflow.util.HistoryFile$Record$parse.call(Unknown Source)
+	at nextflow.util.HistoryFile$_update0_closure3.doCall(HistoryFile.groovy:90)
+	at sun.reflect.GeneratedMethodAccessor56.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:428)
+	at org.codehaus.groovy.runtime.DefaultGroovyMethods.each(DefaultGroovyMethods.java:2358)
+	at org.codehaus.groovy.runtime.DefaultGroovyMethods.each(DefaultGroovyMethods.java:2343)
+	at org.codehaus.groovy.runtime.DefaultGroovyMethods.each(DefaultGroovyMethods.java:2384)
+	at org.codehaus.groovy.runtime.dgm$202.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoMetaMethodSiteNoUnwrapNoCoerce.invoke(PojoMetaMethodSite.java:247)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:56)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at nextflow.util.HistoryFile.update0(HistoryFile.groovy:88)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:362)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at nextflow.util.HistoryFile$_update_closure2.doCall(HistoryFile.groovy:76)
+	at nextflow.util.HistoryFile$_update_closure2.doCall(HistoryFile.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:38)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:53)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130)
+	at nextflow.util.HistoryFile.withFileLock(HistoryFile.groovy:439)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at nextflow.util.HistoryFile.update(HistoryFile.groovy:76)
+	at nextflow.util.HistoryFile.update(HistoryFile.groovy)
+	at nextflow.Session.destroy(Session.groovy:642)
+	at nextflow.script.ScriptRunner.terminate(ScriptRunner.groovy:222)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:122)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:309)
+	at nextflow.cli.Launcher.run(Launcher.groovy:480)
+	at nextflow.cli.Launcher.main(Launcher.groovy:639)
+Jan-14 17:13:27.848 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

@@ -1,0 +1,281 @@
+Jan-14 16:40:34.246 [main] DEBUG nextflow.cli.Launcher - $> nextflow run test.nf --reads 's3://zenofbucket/nf-testing/*_{1,2}.fq' --outdir 's3://zenofbucket/nf-testing/results/' -profile cloud -w 's3://zenofbucket/
+nf-testing/work/' -process.queue queue_test_light
+Jan-14 16:40:34.540 [main] WARN  nextflow.util.HistoryFile - Can't read history file: .nextflow/history
+java.lang.IllegalArgumentException: Not a valid history entry: `nf-testing/work/' -process.queue queue_test_light`
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at nextflow.util.HistoryFile$Record.parse(HistoryFile.groovy:406)
+	at nextflow.util.HistoryFile$Record$parse.call(Unknown Source)
+	at nextflow.util.HistoryFile$_findAll_closure9.doCall(HistoryFile.groovy:264)
+	at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:428)
+	at org.codehaus.groovy.runtime.DefaultGroovyMethods.findResults(DefaultGroovyMethods.java:4761)
+	at org.codehaus.groovy.runtime.DefaultGroovyMethods.findResults(DefaultGroovyMethods.java:4745)
+	at org.codehaus.groovy.runtime.dgm$285.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoMetaMethodSiteNoUnwrapNoCoerce.invoke(PojoMetaMethodSite.java:247)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:56)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at nextflow.util.HistoryFile.findAll(HistoryFile.groovy:262)
+	at nextflow.util.HistoryFile.findAllRunNames(HistoryFile.groovy:458)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:362)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:176)
+	at nextflow.util.HistoryFile$_generateNextName_closure16.doCall(HistoryFile.groovy:462)
+	at nextflow.util.HistoryFile$_generateNextName_closure16.doCall(HistoryFile.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:38)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130)
+	at nextflow.util.HistoryFile.withFileLock(HistoryFile.groovy:439)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at nextflow.util.HistoryFile.generateNextName(HistoryFile.groovy:462)
+	at nextflow.cli.CmdRun.checkRunName(CmdRun.groovy:320)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:261)
+	at nextflow.cli.Launcher.run(Launcher.groovy:480)
+	at nextflow.cli.Launcher.main(Launcher.groovy:639)
+Jan-14 16:40:34.579 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.10.0
+Jan-14 16:40:34.642 [main] INFO  nextflow.cli.CmdRun - Launching `test.nf` [festering_swirles] - revision: 866576adfa
+Jan-14 16:40:34.678 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/ec2-user/nf-testing/my-nextflow/nextflow.config
+Jan-14 16:40:34.679 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/ec2-user/nf-testing/my-nextflow/nextflow.config
+Jan-14 16:40:34.837 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `cloud`
+Jan-14 16:40:37.290 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, cloud, cluster]
+Jan-14 16:40:37.402 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/ec2-user/.nextflow/plugins
+Jan-14 16:40:37.404 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[nf-amazon@1.3.1]
+Jan-14 16:40:37.439 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jan-14 16:40:37.445 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jan-14 16:40:37.460 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Jan-14 16:40:37.483 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jan-14 16:40:37.483 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-amazon version: 1.3.1
+Jan-14 16:40:37.508 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-amazon@1.3.1' resolved
+Jan-14 16:40:37.509 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-amazon@1.3.1'
+Jan-14 16:40:37.538 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-amazon@1.3.1
+Jan-14 16:40:37.616 [main] DEBUG nextflow.file.FileHelper - > Added 'S3FileSystemProvider' to list of installed providers [s3]
+Jan-14 16:40:37.783 [main] DEBUG nextflow.Session - Session uuid: 7f4cf7c2-61e4-48f9-bb9d-923dd340bdef
+Jan-14 16:40:37.783 [main] DEBUG nextflow.Session - Run name: festering_swirles
+Jan-14 16:40:37.790 [main] DEBUG nextflow.Session - Executor pool size: 2
+Jan-14 16:40:37.815 [main] DEBUG nextflow.file.FileHelper - Creating a file system instance for provider: S3FileSystemProvider
+Jan-14 16:40:37.850 [main] DEBUG nextflow.Global - Using AWS credential defined in `default` section in file: /home/ec2-user/.aws/credentials
+Jan-14 16:40:37.851 [main] DEBUG nextflow.file.FileHelper - AWS S3 config details: {secret_key=l29t7C.., max_error_retry=5, access_key=AKIAY5..}
+Jan-14 16:40:39.032 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.10.0 build 5640
+  Created: 11-11-2021 18:27 UTC 
+  System: Linux 4.14.252-195.483.amzn2.x86_64
+  Runtime: Groovy 3.0.9 on OpenJDK 64-Bit Server VM 1.8.0_152-release-1056-b12
+  Encoding: UTF-8 (UTF-8)
+  Process: 9462@ip-172-31-24-232.eu-west-2.compute.internal [172.31.24.232]
+  CPUs: 1 - Mem: 982.5 MB (166.6 MB) - Swap: 0 (0)
+Jan-14 16:40:39.763 [main] DEBUG nextflow.file.FileHelper - Can't check if specified path is NFS (1): /zenofbucket/
+nf-testing/work
+
+Jan-14 16:40:39.763 [main] DEBUG nextflow.Session - Work-dir: s3://zenofbucket/
+nf-testing/work [null]
+Jan-14 16:40:40.041 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[AwsBatchExecutor]
+Jan-14 16:40:40.075 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jan-14 16:40:40.166 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 2; maxThreads: 1000
+Jan-14 16:40:40.340 [main] DEBUG nextflow.Session - Session start invoked
+Jan-14 16:40:40.768 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jan-14 16:40:40.848 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: foo
+Jan-14 16:40:40.849 [main] DEBUG nextflow.Session - Ignite dataflow network (0)
+Jan-14 16:40:40.849 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Jan-14 16:40:40.849 [main] DEBUG nextflow.Session - Session await
+Jan-14 16:40:40.850 [main] DEBUG nextflow.Session - Session await > all process finished
+Jan-14 16:40:40.851 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jan-14 16:40:40.877 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Jan-14 16:40:41.025 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Jan-14 16:40:41.025 [main] INFO  org.pf4j.AbstractPluginManager - Stop plugin 'nf-amazon@1.3.1'
+Jan-14 16:40:41.026 [main] DEBUG nextflow.plugin.BasePlugin - Plugin stopped nf-amazon
+Jan-14 16:40:41.058 [main] WARN  nextflow.util.HistoryFile - Can't read history file: .nextflow/history
+java.lang.IllegalArgumentException: Not a valid history entry: `nf-testing/work/' -process.queue queue_test_light`
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at nextflow.util.HistoryFile$Record.parse(HistoryFile.groovy:406)
+	at nextflow.util.HistoryFile$Record$parse.call(Unknown Source)
+	at nextflow.util.HistoryFile$_update0_closure3.doCall(HistoryFile.groovy:90)
+	at sun.reflect.GeneratedMethodAccessor33.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:428)
+	at org.codehaus.groovy.runtime.DefaultGroovyMethods.each(DefaultGroovyMethods.java:2358)
+	at org.codehaus.groovy.runtime.DefaultGroovyMethods.each(DefaultGroovyMethods.java:2343)
+	at org.codehaus.groovy.runtime.DefaultGroovyMethods.each(DefaultGroovyMethods.java:2384)
+	at org.codehaus.groovy.runtime.dgm$202.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoMetaMethodSiteNoUnwrapNoCoerce.invoke(PojoMetaMethodSite.java:247)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:56)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at nextflow.util.HistoryFile.update0(HistoryFile.groovy:88)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:362)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at nextflow.util.HistoryFile$_update_closure2.doCall(HistoryFile.groovy:76)
+	at nextflow.util.HistoryFile$_update_closure2.doCall(HistoryFile.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:38)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:53)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130)
+	at nextflow.util.HistoryFile.withFileLock(HistoryFile.groovy:439)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at nextflow.util.HistoryFile.update(HistoryFile.groovy:76)
+	at nextflow.util.HistoryFile.update(HistoryFile.groovy)
+	at nextflow.Session.destroy(Session.groovy:642)
+	at nextflow.script.ScriptRunner.terminate(ScriptRunner.groovy:222)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:122)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:309)
+	at nextflow.cli.Launcher.run(Launcher.groovy:480)
+	at nextflow.cli.Launcher.main(Launcher.groovy:639)
+Jan-14 16:40:41.070 [main] WARN  nextflow.util.HistoryFile - Can't read history file: .nextflow/history
+java.lang.IllegalArgumentException: Not a valid history entry: `nf-testing/work/' -process.queue queue_test_light`
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:72)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:59)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at nextflow.util.HistoryFile$Record.parse(HistoryFile.groovy:406)
+	at nextflow.util.HistoryFile$Record$parse.call(Unknown Source)
+	at nextflow.util.HistoryFile$_update0_closure3.doCall(HistoryFile.groovy:90)
+	at sun.reflect.GeneratedMethodAccessor33.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at groovy.lang.Closure.call(Closure.java:428)
+	at org.codehaus.groovy.runtime.DefaultGroovyMethods.each(DefaultGroovyMethods.java:2358)
+	at org.codehaus.groovy.runtime.DefaultGroovyMethods.each(DefaultGroovyMethods.java:2343)
+	at org.codehaus.groovy.runtime.DefaultGroovyMethods.each(DefaultGroovyMethods.java:2384)
+	at org.codehaus.groovy.runtime.dgm$202.invoke(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite$PojoMetaMethodSiteNoUnwrapNoCoerce.invoke(PojoMetaMethodSite.java:247)
+	at org.codehaus.groovy.runtime.callsite.PojoMetaMethodSite.call(PojoMetaMethodSite.java:56)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at nextflow.util.HistoryFile.update0(HistoryFile.groovy:88)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:362)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.callCurrent(PogoMetaClassSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at nextflow.util.HistoryFile$_update_closure2.doCall(HistoryFile.groovy:76)
+	at nextflow.util.HistoryFile$_update_closure2.doCall(HistoryFile.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:38)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:53)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:130)
+	at nextflow.util.HistoryFile.withFileLock(HistoryFile.groovy:439)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:193)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:61)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:171)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)
+	at nextflow.util.HistoryFile.update(HistoryFile.groovy:76)
+	at nextflow.util.HistoryFile.update(HistoryFile.groovy)
+	at nextflow.Session.destroy(Session.groovy:642)
+	at nextflow.script.ScriptRunner.terminate(ScriptRunner.groovy:222)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:122)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:309)
+	at nextflow.cli.Launcher.run(Launcher.groovy:480)
+	at nextflow.cli.Launcher.main(Launcher.groovy:639)
+Jan-14 16:40:41.077 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

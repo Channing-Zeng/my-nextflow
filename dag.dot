@@ -1,0 +1,42 @@
+digraph "dag" {
+p0 [shape=point,label="",fixedsize=true,width=0.1,xlabel="Channel.fromFilePairs"];
+p3 [label="RNASEQ:FASTQC"];
+p0 -> p3 [label="read_pairs_ch"];
+
+p1 [shape=point,label="",fixedsize=true,width=0.1];
+p2 [label="RNASEQ:INDEX"];
+p1 -> p2 [label="transcriptome"];
+
+p2 [label="RNASEQ:INDEX"];
+p4 [label="RNASEQ:QUANT"];
+p2 -> p4;
+
+p3 [label="RNASEQ:FASTQC"];
+p5 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="concat"];
+p3 -> p5;
+
+p0 [shape=point,label="",fixedsize=true,width=0.1,xlabel="Channel.fromFilePairs"];
+p4 [label="RNASEQ:QUANT"];
+p0 -> p4 [label="read_pairs_ch"];
+
+p4 [label="RNASEQ:QUANT"];
+p5 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="concat"];
+p4 -> p5 [label="pair_id"];
+
+p5 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="concat"];
+p6 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="collect"];
+p5 -> p6;
+
+p6 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="collect"];
+p8 [label="MULTIQC"];
+p6 -> p8 [label="$out0"];
+
+p7 [shape=point,label="",fixedsize=true,width=0.1];
+p8 [label="MULTIQC"];
+p7 -> p8 [label="config"];
+
+p8 [label="MULTIQC"];
+p9 [shape=point];
+p8 -> p9;
+
+}

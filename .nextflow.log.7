@@ -1,0 +1,50 @@
+Jan-14 16:31:16.628 [main] DEBUG nextflow.cli.Launcher - $> nextflow run test.nf --reads 's3://zenofbucket/nf-testing/*_{1,2}.fq' --outdir 's3://zenofbucket/nf-testing/results/' -profile cloud -w 's3://zenofbucket/
+nf-testing/work/' -process.queue queue_test_light
+Jan-14 16:31:16.920 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.10.0
+Jan-14 16:31:16.983 [main] INFO  nextflow.cli.CmdRun - Launching `test.nf` [romantic_mcnulty] - revision: 9c7cf0e689
+Jan-14 16:31:17.034 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/ec2-user/nf-testing/my-nextflow/nextflow.config
+Jan-14 16:31:17.035 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/ec2-user/nf-testing/my-nextflow/nextflow.config
+Jan-14 16:31:17.199 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `cloud`
+Jan-14 16:31:19.563 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, cloud, cluster]
+Jan-14 16:31:19.676 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/ec2-user/.nextflow/plugins
+Jan-14 16:31:19.677 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[nf-amazon@1.3.1]
+Jan-14 16:31:19.712 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jan-14 16:31:19.714 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jan-14 16:31:19.723 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Jan-14 16:31:19.751 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jan-14 16:31:19.751 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-amazon version: 1.3.1
+Jan-14 16:31:19.772 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-amazon@1.3.1' resolved
+Jan-14 16:31:19.772 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-amazon@1.3.1'
+Jan-14 16:31:19.804 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-amazon@1.3.1
+Jan-14 16:31:19.890 [main] DEBUG nextflow.file.FileHelper - > Added 'S3FileSystemProvider' to list of installed providers [s3]
+Jan-14 16:31:20.035 [main] DEBUG nextflow.Session - Session uuid: df8499c4-f6a5-4b47-9bb2-1a90114a00c9
+Jan-14 16:31:20.035 [main] DEBUG nextflow.Session - Run name: romantic_mcnulty
+Jan-14 16:31:20.036 [main] DEBUG nextflow.Session - Executor pool size: 2
+Jan-14 16:31:20.067 [main] DEBUG nextflow.file.FileHelper - Creating a file system instance for provider: S3FileSystemProvider
+Jan-14 16:31:20.097 [main] DEBUG nextflow.Global - Using AWS credential defined in `default` section in file: /home/ec2-user/.aws/credentials
+Jan-14 16:31:20.101 [main] DEBUG nextflow.file.FileHelper - AWS S3 config details: {secret_key=l29t7C.., max_error_retry=5, access_key=AKIAY5..}
+Jan-14 16:31:21.251 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 21.10.0 build 5640
+  Created: 11-11-2021 18:27 UTC 
+  System: Linux 4.14.252-195.483.amzn2.x86_64
+  Runtime: Groovy 3.0.9 on OpenJDK 64-Bit Server VM 1.8.0_152-release-1056-b12
+  Encoding: UTF-8 (UTF-8)
+  Process: 3964@ip-172-31-24-232.eu-west-2.compute.internal [172.31.24.232]
+  CPUs: 1 - Mem: 982.5 MB (171.8 MB) - Swap: 0 (0)
+Jan-14 16:31:21.977 [main] DEBUG nextflow.file.FileHelper - Can't check if specified path is NFS (1): /zenofbucket/
+nf-testing/work
+
+Jan-14 16:31:21.977 [main] DEBUG nextflow.Session - Work-dir: s3://zenofbucket/
+nf-testing/work [null]
+Jan-14 16:31:22.219 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[AwsBatchExecutor]
+Jan-14 16:31:22.251 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jan-14 16:31:22.338 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 2; maxThreads: 1000
+Jan-14 16:31:22.514 [main] DEBUG nextflow.Session - Session start invoked
+Jan-14 16:31:22.773 [main] ERROR nextflow.cli.Launcher - Script compilation error
+- file : /home/ec2-user/nf-testing/my-nextflow/test.nf
+- cause: Invalid process definition -- Make sure the process ends with a script wrapped by quote characters @ line 3, column 1.
+   process foo {
+   ^
+
+1 error
+
