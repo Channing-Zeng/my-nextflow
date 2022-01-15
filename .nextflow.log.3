@@ -1,95 +1,67 @@
-Jan-14 17:56:34.026 [main] DEBUG nextflow.cli.Launcher - $> nextflow run test.nf --reads 's3://zenofbucket/nf-testing/*_{1,2}.fq' --outdir 's3://zenofbucket/nf-testing/results/' -profile cloud -w 's3://zenofbucket/
-nf-testing/work/' -process.queue queue_test_light
-Jan-14 17:56:34.325 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.10.0
-Jan-14 17:56:34.397 [main] INFO  nextflow.cli.CmdRun - Launching `test.nf` [golden_goldwasser] - revision: 6f246f3d6c
-Jan-14 17:56:34.446 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/ec2-user/nf-testing/my-nextflow/nextflow.config
-Jan-14 17:56:34.447 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/ec2-user/nf-testing/my-nextflow/nextflow.config
-Jan-14 17:56:34.529 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `cloud`
-Jan-14 17:56:36.968 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, cloud, cluster]
-Jan-14 17:56:37.081 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/ec2-user/.nextflow/plugins
-Jan-14 17:56:37.082 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[nf-amazon@1.3.1]
-Jan-14 17:56:37.113 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Jan-14 17:56:37.114 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Jan-14 17:56:37.119 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
-Jan-14 17:56:37.147 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Jan-14 17:56:37.147 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-amazon version: 1.3.1
-Jan-14 17:56:37.180 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-amazon@1.3.1' resolved
-Jan-14 17:56:37.182 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-amazon@1.3.1'
-Jan-14 17:56:37.214 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-amazon@1.3.1
-Jan-14 17:56:37.280 [main] DEBUG nextflow.file.FileHelper - > Added 'S3FileSystemProvider' to list of installed providers [s3]
-Jan-14 17:56:37.434 [main] DEBUG nextflow.Session - Session uuid: cb00bc7e-93c3-4ccd-92de-a911e9f777d6
-Jan-14 17:56:37.435 [main] DEBUG nextflow.Session - Run name: golden_goldwasser
-Jan-14 17:56:37.435 [main] DEBUG nextflow.Session - Executor pool size: 2
-Jan-14 17:56:37.499 [main] DEBUG nextflow.file.FileHelper - Creating a file system instance for provider: S3FileSystemProvider
-Jan-14 17:56:37.526 [main] DEBUG nextflow.Global - Using AWS credential defined in `default` section in file: /home/ec2-user/.aws/credentials
-Jan-14 17:56:37.527 [main] DEBUG nextflow.file.FileHelper - AWS S3 config details: {secret_key=l29t7C.., max_error_retry=5, access_key=AKIAY5..}
-Jan-14 17:56:39.182 [main] DEBUG nextflow.cli.CmdRun - 
+Jan-15 05:42:08.348 [main] DEBUG nextflow.cli.Launcher - $> nextflow run test.nf -profile cloud -w 's3://zenofbucket/nf-testing/work/' -process.queue queue_test_light --with-container
+Jan-15 05:42:08.655 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 21.10.0
+Jan-15 05:42:08.727 [main] INFO  nextflow.cli.CmdRun - Launching `test.nf` [admiring_keller] - revision: 6f246f3d6c
+Jan-15 05:42:08.779 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/ec2-user/nf-testing/my-nextflow/nextflow.config
+Jan-15 05:42:08.780 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/ec2-user/nf-testing/my-nextflow/nextflow.config
+Jan-15 05:42:08.935 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `cloud`
+Jan-15 05:42:11.232 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [standard, cloud, cluster]
+Jan-15 05:42:11.341 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/home/ec2-user/.nextflow/plugins
+Jan-15 05:42:11.343 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[nf-amazon@1.3.1]
+Jan-15 05:42:11.372 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jan-15 05:42:11.378 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jan-15 05:42:11.387 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Jan-15 05:42:11.423 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jan-15 05:42:11.423 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-amazon version: 1.3.1
+Jan-15 05:42:11.493 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-amazon@1.3.1' resolved
+Jan-15 05:42:11.493 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-amazon@1.3.1'
+Jan-15 05:42:11.628 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-amazon@1.3.1
+Jan-15 05:42:11.788 [main] DEBUG nextflow.file.FileHelper - > Added 'S3FileSystemProvider' to list of installed providers [s3]
+Jan-15 05:42:12.130 [main] DEBUG nextflow.Session - Session uuid: 39cd6b8f-13a6-4a07-adb4-3f795f324869
+Jan-15 05:42:12.131 [main] DEBUG nextflow.Session - Run name: admiring_keller
+Jan-15 05:42:12.131 [main] DEBUG nextflow.Session - Executor pool size: 2
+Jan-15 05:42:12.171 [main] DEBUG nextflow.file.FileHelper - Creating a file system instance for provider: S3FileSystemProvider
+Jan-15 05:42:12.199 [main] DEBUG nextflow.Global - Using AWS credential defined in `default` section in file: /home/ec2-user/.aws/credentials
+Jan-15 05:42:12.200 [main] DEBUG nextflow.file.FileHelper - AWS S3 config details: {secret_key=l29t7C.., max_error_retry=5, access_key=AKIAY5..}
+Jan-15 05:42:13.633 [main] DEBUG nextflow.cli.CmdRun - 
   Version: 21.10.0 build 5640
   Created: 11-11-2021 18:27 UTC 
   System: Linux 4.14.252-195.483.amzn2.x86_64
   Runtime: Groovy 3.0.9 on OpenJDK 64-Bit Server VM 1.8.0_152-release-1056-b12
   Encoding: UTF-8 (UTF-8)
-  Process: 19776@ip-172-31-24-232.eu-west-2.compute.internal [172.31.24.232]
-  CPUs: 1 - Mem: 982.5 MB (154.8 MB) - Swap: 0 (0)
-Jan-14 17:56:39.973 [main] DEBUG nextflow.file.FileHelper - Can't check if specified path is NFS (1): /zenofbucket/
-nf-testing/work
+  Process: 31577@ip-172-31-24-232.eu-west-2.compute.internal [172.31.24.232]
+  CPUs: 1 - Mem: 982.5 MB (281.7 MB) - Swap: 0 (0)
+Jan-15 05:42:14.414 [main] DEBUG nextflow.file.FileHelper - Can't check if specified path is NFS (1): /zenofbucket/nf-testing/work
 
-Jan-14 17:56:39.973 [main] DEBUG nextflow.Session - Work-dir: s3://zenofbucket/
-nf-testing/work [null]
-Jan-14 17:56:40.229 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[AwsBatchExecutor]
-Jan-14 17:56:40.258 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Jan-14 17:56:40.349 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 2; maxThreads: 1000
-Jan-14 17:56:40.536 [main] DEBUG nextflow.Session - Session start invoked
-Jan-14 17:56:41.025 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Jan-14 17:56:41.158 [main] INFO  nextflow.script.BaseScript - 0
-Jan-14 17:56:41.225 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: awsbatch
-Jan-14 17:56:41.226 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'awsbatch'
-Jan-14 17:56:41.234 [main] DEBUG nextflow.executor.Executor - [warm up] executor > awsbatch
-Jan-14 17:56:41.268 [main] DEBUG nextflow.util.ThrottlingExecutor - Creating throttling executor with opts: nextflow.util.ThrottlingExecutor$Options(poolName:AWSBatch-executor, limiter:RateLimiter[stableRate=50.0qps], poolSize:5, maxPoolSize:5, queueSize:5000, maxRetries:10, keepAlive:1m, autoThrottle:true, errorBurstDelay:1s, rampUpInterval:100, rampUpFactor:1.2, rampUpMaxRate:1.7976931348623157E308, backOffFactor:2.0, backOffMinRate:0.0166666667, retryDelay:1s)
-Jan-14 17:56:41.288 [main] DEBUG nextflow.util.ThrottlingExecutor - Creating throttling executor with opts: nextflow.util.ThrottlingExecutor$Options(poolName:AWSBatch-reaper, limiter:RateLimiter[stableRate=50.0qps], poolSize:5, maxPoolSize:5, queueSize:5000, maxRetries:10, keepAlive:1m, autoThrottle:true, errorBurstDelay:1s, rampUpInterval:100, rampUpFactor:1.2, rampUpMaxRate:1.7976931348623157E308, backOffFactor:2.0, backOffMinRate:0.0166666667, retryDelay:1s)
-Jan-14 17:56:41.289 [main] DEBUG n.cloud.aws.batch.AwsBatchExecutor - Creating parallel monitor for executor 'awsbatch' > pollInterval=10s; dumpInterval=5m
-Jan-14 17:56:41.505 [main] INFO  n.cloud.aws.batch.AwsBatchExecutor - Uploading local `bin` scripts folder to s3://zenofbucket/
-nf-testing/work/tmp/1c/0b7fe3a2d6c95146a4dbe4b334af67/bin
-Jan-14 17:56:41.743 [main] DEBUG nextflow.Global - Using AWS credential defined in `default` section in file: /home/ec2-user/.aws/credentials
-Jan-14 17:56:41.874 [main] DEBUG n.cloud.aws.batch.AwsBatchExecutor - [AWS BATCH] Executor options=AwsOptions(cliPath:/home/ec2-user/miniconda/bin/aws, storageClass:null, storageEncryption:null, remoteBinDir:/zenofbucket/
-nf-testing/work/tmp/1c/0b7fe3a2d6c95146a4dbe4b334af67/bin, region:null, maxParallelTransfers:4, maxTransferAttempts:5, delayBetweenAttempts:10s, retryMode:standard, fetchInstanceType:false, jobRole:null, volumes:[], awsCli:/home/ec2-user/miniconda/bin/aws)
-Jan-14 17:56:41.913 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 2; maxThreads: 1000
-Jan-14 17:56:42.234 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: foo
-Jan-14 17:56:42.235 [main] DEBUG nextflow.Session - Ignite dataflow network (1)
-Jan-14 17:56:42.235 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > foo
-Jan-14 17:56:42.247 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
-Jan-14 17:56:42.247 [main] DEBUG nextflow.Session - Session await
-Jan-14 17:56:43.050 [AWSBatch-executor-1] DEBUG n.c.aws.batch.AwsBatchTaskHandler - [AWS BATCH] [AWS BATCH] Found job definition name=nf-channingzen-mamba1:2; container=channingzen/mamba1
-Jan-14 17:56:43.151 [AWSBatch-executor-1] DEBUG n.c.aws.batch.AwsBatchTaskHandler - [AWS BATCH] submitted > job=4a16db0d-871f-4a2b-9f3f-45fa9029fe4b; work-dir=s3://zenofbucket/
-nf-testing/work/e9/821ea4557b40c6a29c6f7e8dc44a17
-Jan-14 17:56:43.152 [AWSBatch-executor-1] INFO  nextflow.Session - [e9/821ea4] Submitted process > foo
-Jan-14 18:01:51.330 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor awsbatch > tasks to be completed: 1 -- submitted tasks are shown below
-~> TaskHandler[id: 1; name: foo; status: SUBMITTED; exit: -; error: -; workDir: s3://zenofbucket/
-nf-testing/work/e9/821ea4557b40c6a29c6f7e8dc44a17]
-Jan-14 18:06:51.335 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor awsbatch > tasks to be completed: 1 -- submitted tasks are shown below
-~> TaskHandler[id: 1; name: foo; status: SUBMITTED; exit: -; error: -; workDir: s3://zenofbucket/
-nf-testing/work/e9/821ea4557b40c6a29c6f7e8dc44a17]
-Jan-14 18:11:51.344 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor awsbatch > tasks to be completed: 1 -- submitted tasks are shown below
-~> TaskHandler[id: 1; name: foo; status: SUBMITTED; exit: -; error: -; workDir: s3://zenofbucket/
-nf-testing/work/e9/821ea4557b40c6a29c6f7e8dc44a17]
-Jan-14 18:16:51.353 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor awsbatch > tasks to be completed: 1 -- submitted tasks are shown below
-~> TaskHandler[id: 1; name: foo; status: SUBMITTED; exit: -; error: -; workDir: s3://zenofbucket/
-nf-testing/work/e9/821ea4557b40c6a29c6f7e8dc44a17]
-Jan-14 18:21:51.358 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor awsbatch > tasks to be completed: 1 -- submitted tasks are shown below
-~> TaskHandler[id: 1; name: foo; status: SUBMITTED; exit: -; error: -; workDir: s3://zenofbucket/
-nf-testing/work/e9/821ea4557b40c6a29c6f7e8dc44a17]
-Jan-14 18:26:51.366 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor awsbatch > tasks to be completed: 1 -- submitted tasks are shown below
-~> TaskHandler[id: 1; name: foo; status: SUBMITTED; exit: -; error: -; workDir: s3://zenofbucket/
-nf-testing/work/e9/821ea4557b40c6a29c6f7e8dc44a17]
-Jan-14 18:31:51.377 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor awsbatch > tasks to be completed: 1 -- submitted tasks are shown below
-~> TaskHandler[id: 1; name: foo; status: SUBMITTED; exit: -; error: -; workDir: s3://zenofbucket/
-nf-testing/work/e9/821ea4557b40c6a29c6f7e8dc44a17]
-Jan-14 18:36:51.387 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor awsbatch > tasks to be completed: 1 -- submitted tasks are shown below
-~> TaskHandler[id: 1; name: foo; status: SUBMITTED; exit: -; error: -; workDir: s3://zenofbucket/
-nf-testing/work/e9/821ea4557b40c6a29c6f7e8dc44a17]
-Jan-14 18:41:51.402 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor awsbatch > tasks to be completed: 1 -- submitted tasks are shown below
-~> TaskHandler[id: 1; name: foo; status: SUBMITTED; exit: -; error: -; workDir: s3://zenofbucket/
-nf-testing/work/e9/821ea4557b40c6a29c6f7e8dc44a17]
-Jan-14 18:46:51.429 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor awsbatch > tasks to be completed: 1 -- submitted tasks are shown below
-~> TaskHandler[id: 1; name: foo; status: SUBMITTED; exit: -; error: -; workDir: s3://zenofbucket/
-nf-testing/work/e9/821ea4557b40c6a29c6f7e8dc44a17]
+Jan-15 05:42:14.415 [main] DEBUG nextflow.Session - Work-dir: s3://zenofbucket/nf-testing/work [null]
+Jan-15 05:42:14.657 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[AwsBatchExecutor]
+Jan-15 05:42:14.694 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jan-15 05:42:14.798 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 2; maxThreads: 1000
+Jan-15 05:42:14.973 [main] DEBUG nextflow.Session - Session start invoked
+Jan-15 05:42:15.518 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jan-15 05:42:15.634 [main] INFO  nextflow.script.BaseScript - 0
+Jan-15 05:42:15.715 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: awsbatch
+Jan-15 05:42:15.715 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'awsbatch'
+Jan-15 05:42:15.717 [main] DEBUG nextflow.executor.Executor - [warm up] executor > awsbatch
+Jan-15 05:42:15.760 [main] DEBUG nextflow.util.ThrottlingExecutor - Creating throttling executor with opts: nextflow.util.ThrottlingExecutor$Options(poolName:AWSBatch-executor, limiter:RateLimiter[stableRate=50.0qps], poolSize:5, maxPoolSize:5, queueSize:5000, maxRetries:10, keepAlive:1m, autoThrottle:true, errorBurstDelay:1s, rampUpInterval:100, rampUpFactor:1.2, rampUpMaxRate:1.7976931348623157E308, backOffFactor:2.0, backOffMinRate:0.0166666667, retryDelay:1s)
+Jan-15 05:42:15.780 [main] DEBUG nextflow.util.ThrottlingExecutor - Creating throttling executor with opts: nextflow.util.ThrottlingExecutor$Options(poolName:AWSBatch-reaper, limiter:RateLimiter[stableRate=50.0qps], poolSize:5, maxPoolSize:5, queueSize:5000, maxRetries:10, keepAlive:1m, autoThrottle:true, errorBurstDelay:1s, rampUpInterval:100, rampUpFactor:1.2, rampUpMaxRate:1.7976931348623157E308, backOffFactor:2.0, backOffMinRate:0.0166666667, retryDelay:1s)
+Jan-15 05:42:15.781 [main] DEBUG n.cloud.aws.batch.AwsBatchExecutor - Creating parallel monitor for executor 'awsbatch' > pollInterval=10s; dumpInterval=5m
+Jan-15 05:42:16.009 [main] INFO  n.cloud.aws.batch.AwsBatchExecutor - Uploading local `bin` scripts folder to s3://zenofbucket/nf-testing/work/tmp/d7/0c1c447ec698a9cf4ee65702b9f90c/bin
+Jan-15 05:42:16.214 [main] DEBUG nextflow.Global - Using AWS credential defined in `default` section in file: /home/ec2-user/.aws/credentials
+Jan-15 05:42:16.385 [main] DEBUG n.cloud.aws.batch.AwsBatchExecutor - [AWS BATCH] Executor options=AwsOptions(cliPath:/home/ec2-user/miniconda/bin/aws, storageClass:null, storageEncryption:null, remoteBinDir:/zenofbucket/nf-testing/work/tmp/d7/0c1c447ec698a9cf4ee65702b9f90c/bin, region:null, maxParallelTransfers:4, maxTransferAttempts:5, delayBetweenAttempts:10s, retryMode:standard, fetchInstanceType:false, jobRole:null, volumes:[], awsCli:/home/ec2-user/miniconda/bin/aws)
+Jan-15 05:42:16.426 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 2; maxThreads: 1000
+Jan-15 05:42:16.737 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: foo
+Jan-15 05:42:16.742 [main] DEBUG nextflow.Session - Ignite dataflow network (1)
+Jan-15 05:42:16.742 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > foo
+Jan-15 05:42:16.749 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Jan-15 05:42:16.749 [main] DEBUG nextflow.Session - Session await
+Jan-15 05:42:17.567 [AWSBatch-executor-1] DEBUG n.c.aws.batch.AwsBatchTaskHandler - [AWS BATCH] [AWS BATCH] Found job definition name=nf-channingzen-mamba1:2; container=channingzen/mamba1
+Jan-15 05:42:17.678 [AWSBatch-executor-1] DEBUG n.c.aws.batch.AwsBatchTaskHandler - [AWS BATCH] submitted > job=54df7850-ce78-49c4-9136-79f22222ce67; work-dir=s3://zenofbucket/nf-testing/work/43/834a6150db2f5771e799bc5761b6e4
+Jan-15 05:42:17.679 [AWSBatch-executor-1] INFO  nextflow.Session - [43/834a61] Submitted process > foo
+Jan-15 05:45:05.944 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: foo; status: COMPLETED; exit: 0; error: -; workDir: s3://zenofbucket/nf-testing/work/43/834a6150db2f5771e799bc5761b6e4]
+Jan-15 05:45:06.025 [main] DEBUG nextflow.Session - Session await > all process finished
+Jan-15 05:45:06.079 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jan-15 05:45:06.114 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=1; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=10.1s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Jan-15 05:45:06.295 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Jan-15 05:45:06.295 [main] INFO  org.pf4j.AbstractPluginManager - Stop plugin 'nf-amazon@1.3.1'
+Jan-15 05:45:06.295 [main] DEBUG nextflow.plugin.BasePlugin - Plugin stopped nf-amazon
+Jan-15 05:45:06.344 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

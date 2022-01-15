@@ -1,0 +1,11 @@
+WARN: Can't read history file: .nextflow/history
+WARN: Can't read history file: .nextflow/history
+WARN: Can't read history file: .nextflow/history
+N E X T F L O W  ~  version 21.10.0
+Launching `test.nf` [confident_mahavira] - revision: 6f246f3d6c
+0
+Uploading local `bin` scripts folder to s3://zenofbucket/nf-testing/work/tmp/09/d6e51de5d96d2c1a4f953efa04559d/bin
+[-        ] process > foo -
+
+[-        ] process > foo -
+

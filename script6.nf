@@ -121,14 +121,14 @@ workflow test{
 
 
 
-include { foo as bar } from './test'
+//include { foo as bar } from './test'
 workflow {
     params.user_input=params.transcriptome_file
 
     take: 
 
     main:
-	bar()
+//	bar()
 
         test(params.user_input, read_pairs_ch)
 
@@ -144,8 +144,8 @@ workflow.onComplete {
         log.info ( workflow.success ? "\nDone! Open the following report in your browser --> $params.outdir/multiqc_report.html\n" : "Oops .. something went wrong" )
 	
 
-        sendMail( to: 'zqlaiyy@gmail.com',
-          subject: 'Catch up',
-          body: 'Hi, how are you!'
-)
+//        sendMail( to: 'zqlaiyy@gmail.com',
+ //         subject: 'Catch up',
+   //       body: 'Hi, how are you!'
+//)
 }

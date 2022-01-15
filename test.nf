@@ -7,8 +7,9 @@ process foo {
         stdout
     script:
     """
-	whoami
-	ls -ld /tmp
+	which fastqc
+	which python
+	cp $reads .
     """
 }
 
